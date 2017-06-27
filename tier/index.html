@@ -61,25 +61,7 @@
 	<div id="char" class="sort">
 		<div>If no characters are loaded here, choose a game by clicking the "Change game" button above.</div>
 	</div>
-	<div id="gameChange">
-			<h1>CHANGE GAME</h1>
-			<span id="close"></span>
-			<div id="switchButtons">
-				<button id="switch64">Super Smash Bros. 64</button>
-				<button id="switchMelee">Super Smash Bros. Melee</button>
-				<button id="switchBrawl">Super Smash Bros. Brawl</button>
-				<button id="switchSmash4">Super Smash Bros. 4 (Screenshots)</button>
-				<button id="switchSSB4Renders">Super Smash Bros. 4 (Renders)</button><br>
-				<button id="switchPM">Project M</button>
-				<button id="switchSSF2">Super Smash Flash 2</button>
-				<button id="switchBrawlMinus">Brawl Minus</button>
-				<button id="switchBrawlZeus">Brawl Zeus</button><br>
-				<button id="switchSFV">Street Fighter V</button>
-				<button id="switchGGREV">Guilty Gear Xrd -Revelator-</button>
-				<button id="switchBrawlhalla">Brawlhalla</button>
-				<button id="switchOW">Overwatch</button>
-				<button id="switchARMS">ARMS</button>
-		        </div>
+	
 	<div id="overlay">
 		<div id="modalWrapper">
 			<div id="modal">
@@ -92,13 +74,33 @@
 				<p><button id="deleteRow">Delete row</button> <button id="clearRow">Clear row</button></p>
 				<p><button id="addRowUp">Add row above</button> <button id="addRowBelow">Add row below</button></p>
 			</div>
+			<div id="gameChange">
+				<h1>CHANGE GAME</h1>
+				<span id="close"></span>
+				<div id="switchButtons">
+					<button id="switch64">Super Smash Bros. 64</button>
+					<button id="switchMelee">Super Smash Bros. Melee</button>
+					<button id="switchBrawl">Super Smash Bros. Brawl</button>
+					<button id="switchSmash4">Super Smash Bros. 4 (Screenshots)</button>
+					<button id="switchSSB4Renders">Super Smash Bros. 4 (Renders)</button><br>
+					<button id="switchPM">Project M</button>
+					<button id="switchSSF2">Super Smash Flash 2</button>
+					<button id="switchBrawlMinus">Brawl Minus</button>
+					<button id="switchBrawlZeus">Brawl Zeus</button><br>
+					<button id="switchSFV">Street Fighter V</button>
+					<button id="switchGGREV">Guilty Gear Xrd -Revelator-</button>
+					<button id="switchBrawlhalla">Brawlhalla</button>
+					<button id="switchOW">Overwatch</button>
+					<button id="switchARMS">ARMS</button>
+				</div>
 				<p><strong>Changing your game will empty your tierlist!</strong> Do not click unless you are sure you want to change! You cannot undo this.</p>
 				<p>64, Melee, Brawl, and Smash 4 screenshot icons from <a href="http://ssbwiki.com">SmashWiki</a>. Smash 4 render icons made by /u/wafflepotamus. Project M screenshot icons made by /u/brewster_the_pigeon. Smash Flash 2 screenshot icons made by /u/AxeEnding999. Brawl Minus icons made by /u/mslb99. Street Fighter V icons from <a href="http://sfv-wiki.com/wiki/STREET_FIGHTER_V_Wiki">SFV-Wiki</a>. Guilty Gear screenshot from <a href="http://www.dustloop.com/wiki/index.php/Guilty_Gear_Xrd_-REVELATOR-">Dustloop GG Rev Wiki</a>. Overwatch icons made by Blizzard Entertainment.</p>
 			</div>
 			<div id="helpMenu">
 				<h1>HELP</h1>
 				<span id="close"></span>
-				<p>This is a variant of Quetzle's Smash Apps's Tier List Maker. All credit goes to him. https://quetzle.github.io/smash-apps/</p>
+				<p>This is the new version of the old Smash Tier List Maker. If you still like the old one, <a href="old/">click here</a> to go there.</p>
+				<p><strong>All 4 official Smash games and Project M are supported.</strong> If you want to change the game you are using, click on "Change game" in the top bar.</p>
 				<p><strong>You can take screenshots of your tierlist.</strong> To take a screenshot, click on the "Share" button in the top bar. A popup should appear that contains an image of your tierlist. You can copy or save this image to then upload to an image hosting site. If the screenshot feature does not work for you, you can click the "Hide controls" button to make the list look cleaner.</p>
 				<p><strong>You can share editable versions of your tierlist.</strong> Click on the "Share" button and you will see a textbox that contains a code. Copy and share this with others so that they can edit your tierlist.</p>
 				<p><strong>Your latest tierlist autosaves to your device.</strong> As soon as you drag a character image, your tierlist will be saved. Any time you reopen it you will be able to access your previous tierlist.</p>
@@ -142,7 +144,7 @@
 		var gameCorrinMode = ["ssb4r","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm"];
 		var gameOW = ["ow","ana","bastion","dva","genji","hanzo","junkrat","lucio","mccree","mei","mercy","pharah","reaper","reinhardt","roadhog","soldier","sombra","symmetra","torbjorn","tracer","widowmaker","winston","zarya","zenyatta"];
 		var gameBrawlhalla = ["bh","ada","asuri","azoth","barraza","bodvar","brynn","cassidy","diana","ember","gnash","hattori","jhala","koji","kor","lordvraxx","lucien","orion","queennai","ragnir","scarlet","sentinel","sirroland","teros","thatch","ulgrim","val","wushang","axe","bow","gauntlet","gun","hammer","katar","lance","spear","sword"];
-		var gameARMS = ["arms","springman","ribbongirl","ninjara","mastermummy","minmin","mechanica","twintelle","byte&barq","kidcobra","helix"]
+		var gameBrawlhalla = ["arms","springman","ribbongirl","ninjara","mastermummy","minmin","mechanica","twintelle","byte&barq","kidcobra","helix"];
 		
 		var singleTier = "<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'><div class='hiddenkid'></div></div></td><td><div id='settings'></div><div id='moveButtons'><div id='moveUp'></div><div id='moveDown'></div></div></td></tr>";
 		
@@ -446,7 +448,7 @@
 		$(document).ready( function() {
 			$("#char").html("<div></div>");
 			if (localStorage.getItem("TierListMakerCode") === null)
-				changeGame(gameSmash4);
+				changeGame(gameARMS);
 			else {
 				$("#exportcode").val(localStorage.getItem("TierListMakerCode"));
 				loadCode(localStorage.getItem("TierListMakerCode"));
