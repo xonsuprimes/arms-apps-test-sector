@@ -123,7 +123,7 @@
 		var gameCorrinMode = ["ssb4r","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm"];
 		var gameOW = ["ow","ana","bastion","dva","genji","hanzo","junkrat","lucio","mccree","mei","mercy","pharah","reaper","reinhardt","roadhog","soldier","sombra","symmetra","torbjorn","tracer","widowmaker","winston","zarya","zenyatta"];
 		var gameBrawlhalla = ["bh","ada","asuri","azoth","barraza","bodvar","brynn","cassidy","diana","ember","gnash","hattori","jhala","koji","kor","lordvraxx","lucien","orion","queennai","ragnir","scarlet","sentinel","sirroland","teros","thatch","ulgrim","val","wushang","axe","bow","gauntlet","gun","hammer","katar","lance","spear","sword"];
-		var gameARMS = ["arms","springman","ribbongirl","ninjara","mastermummy","minmin","mechanica","twintelle","byte&barq","kidcobra","helix"]
+		var gameARMSWeapons = ["armsweapons","armwhammer","armtribolt","armtriblast","armtoaster","armthunderbird","armsparky","armslapamander","armslamamander","armseekie","armrevolver","armretorcher","armramram","armpopper","armphoenix","armparasol","armmegawatt","armmegaton","armicedragon","armhydra","armhomie","armguardian","armdragonarm","armcracker","armcoolerang","armchilla","armchakram","armbuff","armbubb","armboomerang","armblorb"]
 		
 		var singleTier = "<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'><div class='hiddenkid'></div></div></td><td><div id='settings'></div><div id='moveButtons'><div id='moveUp'></div><div id='moveDown'></div></div></td></tr>";
 		
@@ -209,7 +209,7 @@
 				case "switchSSF2": changeGame(gameSSF2);break;
 				case "switchBrawlhalla": changeGame(gameBrawlhalla);break;
 				case "switchOW": changeGame(gameOW);break;
-				case "switchARMS": changeGame(gameARMS);break;
+				case "switchARMSWeapons": changeGame(gameARMSWeapons);break;
 			}
 		});
 			
@@ -292,7 +292,7 @@
 					case "ssf2": changeGame(gameSSF2);break;
 					case "bh": changeGame(gameBrawlhalla);break;
 					case "ow": changeGame(gameOW);break;
-					case "arms": changeGame(gameARMS);break;
+					case "armsweapons": changeGame(gameARMSWeapons);break;
 				}
 				loadCode(currentGameChars[0]+"==S|0==A|1==B|3==C|5==D|7==E|8==F|9");
 			}
@@ -398,7 +398,7 @@
 				case "ssf2": changeGame(gameSSF2);break;
 				case "bh": changeGame(gameBrawlhalla);break;
 				case "ow": changeGame(gameOW);break;
-				case "arms": changeGame(gameARMS);break;
+				case "armsweapons": changeGame(gameARMSWeapons);break;
 			}
 			for (var i = 1; i < processedCode.length; i++) {
 				$("tbody").append(singleTier);
@@ -427,7 +427,7 @@
 		$(document).ready( function() {
 			$("#char").html("<div></div>");
 			if (localStorage.getItem("TierListMakerCode") === null)
-				changeGame(gameSmash4);
+				changeGame(gameARMSWeapons);
 			else {
 				$("#exportcode").val(localStorage.getItem("TierListMakerCode"));
 				loadCode(localStorage.getItem("TierListMakerCode"));
